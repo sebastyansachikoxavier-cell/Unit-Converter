@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>HTML</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <select id="pickConverter" onchange="changeUnit()">
+  <option value="length">Panjang</option>
+ 
+  <option value="mass">Massa</option>
+</select>
+
+<div class="row">
+<input type="number" id="inputV1" value="1" oninput="convertValue()">
+<select id="convertV1"></select>
+
+<input type="number" id="inputV2" value="100" oninput="convertValueReverse()">
+<select id="convertV2"></select>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

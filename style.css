@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgray;
+  font-family: sans-serif;
+  width: 350px;
+}
+#pickConverter {
+  font-size: 15px;
+  padding-left: 120px;
+  padding-right: 148px;
+}
+#inputV1 {
+  font-size: 15px;
+  text-align: right;
+}
+#inputV2 {
+  font-size: 15px;
+  text-align: right;
+}
+#convertV1{
+  font-size: 15px;
+}
+#convertV2 {
+  font-size: 15px;
+}
+.row {
+  display: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
