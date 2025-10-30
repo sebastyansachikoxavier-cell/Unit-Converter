@@ -1,35 +1,79 @@
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: lightgray;
-  font-family: sans-serif;
-  width: 350px;
+*{box-sizing:border-box}
+html,body {
+  height: 100%;
+  background: lightgray;
+  color: black;
 }
+
+
 #pickConverter {
-  font-size: 15px;
-  padding-left: 120px;
-  padding-right: 148px;
-}
-#inputV1 {
-  font-size: 15px;
-  text-align: right;
-}
-#inputV2 {
-  font-size: 15px;
-  text-align: right;
-}
-#convertV1{
-  font-size: 15px;
-}
-#convertV2 {
-  font-size: 15px;
-}
-.row {
-  display: center;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  background: burlywood;
+  color: black;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
 }
+
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 5px;
+  margin-top: 5px;
+  align-items: center;
+}
+
+
+input {
+  width: 100%;
+  background: burlywood;
+  border: 1px solid black;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: black;
+  text-align: right;
+  outline: none;
+}
+
+
+
+select {
+  width: 100%;
+  background: burlywood;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  appearance: none;
+}
+
+
+/* remove native number spinners */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { -webkit-appearance:none;
+  margin:0; 
+}
+
+
+/* very small screens reduce right column */
+@media (max-width:360px) {
+  .main-wrap {
+    padding: 10px;
+  }
+  .row { 
+    grid-template-columns: 1fr 98px; gap: 6px; 
+  }
+  #pickConverter { 
+    font-size: 15px;
+    padding: 9px; 
+  }
+  input,select {
+    font-size: 15px; 
+    padding: 9px; 
+  }
+}
+
+
